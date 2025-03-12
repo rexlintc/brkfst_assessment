@@ -1,2 +1,6 @@
+# venv
+*venv/
+
+# jupyter notebook
 .DS_store
 .ipynb_checkpoints/

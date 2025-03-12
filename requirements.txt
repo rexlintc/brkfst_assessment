@@ -3,4 +3,5 @@ python-dotenv==1.0.1
 requests==2.31.0
 pandas==2.2.1
 tqdm==4.66.2
-aiohttp==3.9.3 
+aiohttp==3.9.3
+smolagents==1.10.0

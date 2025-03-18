@@ -1,3 +1,7 @@
+# Data
+/kaggle_datasets/
+/scraped_data/
+
 # env
 .env
 

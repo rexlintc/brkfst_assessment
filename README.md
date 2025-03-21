@@ -1,18 +1,19 @@
-# Social Media
+# Social Media Influence Network
 
-## Overview
+## Project Overview
+This project aims to build two social media tools that can help with social media marketing. The first tool is building a network graph to identify influential users, communiities, and viral content. The second tool is building a content virality predictor.
 
 ## Part 1. Network Graph
 
-The goal is to build a network graph to identify influential users, communities, and viral content.
+In order to build a network graph that allows users to identify influential users, communities, and viral content, we will need relevant data to be able to glean those insights. There are several ways to identify influential users, but one of the most straightforward ways is how much reach does this user have. Reach can be observed in a network graph by the number of connections a user has. Communities can be observed in a network graph by proximity or how related nodes are with each other. Depending on what kind of data we gather, we can use clustering algorithms to identify different communities and groups within the network. Lastly viral content can potentially be gleaned from a network graph by observing whether content is relevant to clusters of influential users or communities.
 
-### Influential users
+Data required for network graph
+1. Reach: Follower/following relationship
+2. Account proximity: user traits/characteristics e.g. (common language, geography, time zone, etc.)
+3. Hashtags: to identify content clusters among users
 
-In a graph of user network, we can identify influential users through several ways.
-
-1. Follower/following relationship
-2. Mentions
-3. Hashtags - can be used to identify communities
+### Data Collection
+My initial approach was to build an web scraper that can scrape social media data. However, I soon ran into challenges with social media platforms preventing automated access and data scraping through security measures such as online challenges that prove you are a human. Then I transitioned to gathering datasets that are already scraped by others and uploaded to Kaggle for public use. However, most of the data are not relevant for our use case and are often stale. Lastly, I found a useful tool called [gallery-dl](https://github.com/mikf/gallery-dl) that can scrape data from instagram without being blocked. By using a combination of data scraped from Wikipedia and this tool, I was able to scrap most recent 5 posts from the [top 50 instagram accounts](https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts).
 
 ## Part 2. Virality Predictor
 

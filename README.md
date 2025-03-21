@@ -24,9 +24,9 @@ Unfortunately, since this scraper tool is primarily for content scraping, I coul
 Here is the network graph generated from the data. Some basic insights from this graph include that major influencers mostly tag people within their own circle. From the few connections (edges) we can see between influencers, there are obvious connections. For example, there is a tagging connection between Kim and Khloe Kardashian. Given the limited data we were able to gather, there are not many additional insights we can derive.
 
 ### Production
-The first step in scaling this for production is to create a scheduled job that scrapes new data daily and appends it to a data store. Next, I would build an online tool that allows users to interact with the network graph in real-time and select what kind of information they want to view. We can even introduce a temporal aspect to the graph, enabling users to look back in history to see dynamic changes in the network over time.
+The first step in scaling this for production is to create a scheduled job that scrapes new data daily and appends it to a data store. Next, I would build an online tool that allows users to interact with the network graph in real-time and be able to select what kind of information they want to view. We can even introduce a temporal aspect to the network graph, enabling users to look back in history to see dynamic changes in the network over time. I only scraped data from Instagram for this project, but in production, the same pipeline should be built for each social media platform. 
 
-## Part 2. Virality Predictor
+## Part 2. Content Virality Predictor
 
 The goal is to build a virality predictor for social media content. We need to develop a model or system of models that can predict whether a post will become viral before it actually does. This can be a tool used to evaluate marketing campaigns and help select potentially viral content for release.
 

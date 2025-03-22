@@ -43,5 +43,9 @@ The standard engagement metrics are the simplest way to start measuring whether 
 ### Data Collection
 From the data I gathered to build the network graph, I also scraped the actual images from top influencers. To transform the image data into usable features, I used ResNet50, a trained deep neural network for image classification, and utilized all but the last layer to generate embeddings for the images. In addition to these embeddings, I scraped post metadata that includes captions, likes, and other information. I used BERT, a language model, to generate text embeddings for the captions. Combining all these, I have the training data to train a content virality predictor given an image and its caption.
 
+### Model Performance
+![Model Training Performance Graph](model_training_performance.png)
+The simple logistic regression model I trained didn't converge and it is likely becaue I have so little training data. In addition, I only have data from top 50 influencers globally which is an extreme outlier of the general population of influencers to begin with. To make the model perform better, I will need to scrape data from different tiers of influencers. I will need to gather data from micro-influencers, nano-influencers, and some non-influencers as well to balance out my data.
+
 ### Production
 I envision influencers working with the company uploading their planned content to a centralized platform for review. This model can serve as a tool integrated into that platform, scoring each planned post for its potential virality. The next step would be to build a complete feedback loop that monitors and gathers data from launched content, using it as feedback to fine-tune the model. Additionally, we can incorporate parameters into the model to allow for adjustments in behavior and prediction based on the marketing campaign goals.
